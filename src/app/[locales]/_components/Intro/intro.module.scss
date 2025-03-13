@@ -1,0 +1,73 @@
+.intro {
+	min-height: 700px;
+	padding: 50px 0;
+	background-color: #f2f2f2;
+	display: flex;
+	align-items: center;
+	text-align: center;
+	position: relative;
+	color: var(--white);
+
+	&:after {
+		content: '';
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		background: transparent url(https://belaltheme.com/html-preview/Formula/images/blog/1.jpg)
+			no-repeat 50% 50% / cover;
+		z-index: 0;
+		filter: brightness(0.33);
+	}
+
+	h1 {
+		text-align: center;
+		color: var(--white);
+		font-size: 45px;
+		font-weight: 700;
+		margin-bottom: 20px;
+		text-transform: uppercase;
+
+		@media (min-width: 768px) {
+			font-size: 60px;
+		}
+
+		span {
+			color: var(--basePageColor);
+		}
+	}
+
+	p {
+		font-size: 15px;
+		margin-bottom: 30px;
+
+		@media (min-width: 768px) {
+			max-width: 70vw;
+		}
+	}
+
+	&__buttons {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 10px;
+
+		button {
+			background: transparent;
+			border: 2px solid var(--basePageColor);
+			margin: 0 10px 30px;
+			border-radius: 30px;
+			color: var(--white);
+			font-size: 13px;
+			padding: 14px 30px;
+			text-transform: uppercase;
+			letter-spacing: 1px;
+			transition: background 0.2s ease 0s;
+
+			&:hover {
+				background-color: var(--basePageColor);
+			}
+		}
+	}
+}

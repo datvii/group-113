@@ -1,0 +1,55 @@
+.headings {
+	margin-bottom: 30px;
+	color: var(--black);
+	text-align: center;
+
+	@media (min-width: 768px) {
+		margin-bottom: 60px;
+	}
+
+	&.white {
+		color: var(--white);
+	}
+
+	h1 {
+		font-size: 45px;
+		font-weight: 700;
+		margin-bottom: 20px;
+		text-transform: uppercase;
+
+		@media (min-width: 768px) {
+			font-size: 60px;
+		}
+
+		& + p {
+			font-size: 15px;
+
+			@media (min-width: 768px) {
+				margin: 0 auto 20px;
+				max-width: 70vw;
+			}
+		}
+	}
+
+	h1,
+	h2 {
+		span {
+			color: var(--basePageColor);
+		}
+	}
+
+	h2 {
+		font-size: 30px;
+		font-weight: 600;
+		line-height: 1;
+		text-transform: uppercase;
+		margin-bottom: 20px;
+	}
+
+	p {
+		font-size: 14px;
+		font-weight: 300;
+		max-width: 500px;
+		margin: 0 auto 20px;
+	}
+}

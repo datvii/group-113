@@ -1,0 +1,139 @@
+.posts {
+	padding: 50px 0;
+
+	h1 {
+		color: var(--black);
+		font-size: 30px;
+		font-weight: 600;
+		line-height: 1;
+		text-transform: uppercase;
+		margin-bottom: 20px;
+		text-align: center;
+
+		& + p {
+			text-align: center;
+			max-width: 500px;
+			margin: 0 auto;
+		}
+	}
+
+	&__content {
+		padding: 10px;
+
+		& > div {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			padding: 10px 0;
+			font-weight: bold;
+			color: gray;
+		}
+	}
+
+	&__list {
+		padding-top: 25px;
+		display: flex;
+		flex-wrap: wrap;
+		gap: 15px;
+
+		li {
+			display: grid;
+			position: relative;
+			gap: 10px;
+			box-shadow: 1px 1px 18px 8px #0000004d;
+			border-radius: 3px;
+			overflow: hidden;
+			width: 100%;
+
+			@media (min-width: 768px) {
+				width: calc(100% / 2 - 10px);
+			}
+
+			@media (min-width: 1024px) {
+				width: calc(100% / 3 - 10px);
+			}
+
+			&:hover {
+				picture {
+					filter: saturate(0.5);
+				}
+			}
+
+			a > div {
+				padding: 10px 10px 45px;
+
+				> div {
+					display: flex;
+					align-items: center;
+					justify-content: space-between;
+					gap: 10px;
+					position: absolute;
+					bottom: 10px;
+					left: 10px;
+					right: 10px;
+				}
+
+				span {
+					color: #555;
+					transition: color 0.4s ease 0s;
+					text-transform: uppercase;
+				}
+			}
+
+			picture {
+				margin-bottom: 20px;
+				transition: filter 0.3s ease;
+				min-height: 140px;
+			}
+
+			h3 {
+				font-size: 20px;
+				color: #555;
+				font-weight: bold;
+				text-transform: capitalize;
+				margin-bottom: 12px;
+				transition: color 0.4s ease 0s;
+				margin-bottom: 10px;
+			}
+
+			p {
+				font-size: 15px;
+				line-height: 25px;
+				font-weight: 300;
+				color: #888;
+				font-family: 'Open Sans', sans-serif;
+				display: -webkit-box;
+				-webkit-line-clamp: 3;
+				-webkit-box-orient: vertical;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				height: 75px;
+			}
+		}
+	}
+}
+
+.post {
+	picture {
+		margin-bottom: 20px;
+
+		img {
+			height: 50vh;
+			object-fit: cover;
+			width: 100%;
+		}
+	}
+
+	&__content {
+		padding: 16px;
+		font-size: 20px;
+
+		h3 {
+			font-size: 35px;
+			margin-bottom: 20px;
+		}
+
+		p {
+		}
+	}
+}

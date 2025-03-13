@@ -1,0 +1,138 @@
+:root {
+	--white: #fff;
+	--lightGray: #ededed;
+	--black: #0a0a0a;
+	--blue: #0070f3;
+	--green: #009688;
+	--orange: #ffa733;
+	--background: var(--white);
+	--foreground: #171717;
+	--basePageColor: var(--green);
+	--basePageTransitionColor: #19d2c0;
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--background: var(--black);
+		--foreground: var(--lightGray);
+	}
+}
+
+html,
+body {
+	max-width: 100vw;
+	overflow-x: hidden;
+}
+
+body {
+	color: var(--foreground);
+	background: var(--background);
+	font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	line-height: 1.5;
+	display: flex;
+	justify-content: space-between;
+	flex-direction: column;
+	min-height: 100svh;
+}
+
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+@media (prefers-color-scheme: dark) {
+	html {
+		color-scheme: dark;
+	}
+}
+
+/* Improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+	display: block;
+	max-width: 100%;
+}
+
+/* Inherit fonts for form controls */
+input,
+button,
+textarea,
+select {
+	font: inherit;
+}
+
+button {
+	cursor: pointer;
+}
+
+/* Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	overflow-wrap: break-word;
+}
+
+/* Improve line wrapping */
+p {
+	text-wrap: pretty;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	text-wrap: balance;
+}
+
+/* Create a root stacking context */
+#root,
+#__next {
+	isolation: isolate;
+}
+
+ul,
+ol {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.container {
+	max-width: 1470px;
+	margin: 0 auto;
+	padding: 0 15px;
+	position: relative;
+	z-index: 2;
+}
+
+.row {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+main {
+	flex: 1;
+}
