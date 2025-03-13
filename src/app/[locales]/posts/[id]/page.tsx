@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from '../../_components/Posts/posts.module.scss';
 import { baseUrl, getAllPosts } from '@/app/[locales]/services';
-import { useRouter } from 'next/router';
+// import { useRouter } from 'next/router';
 
 export type TPostParams = {
 	params: {
